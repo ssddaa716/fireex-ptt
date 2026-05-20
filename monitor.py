@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import os
 import time
  
-KEYWORDS = ["售", "韋禮安"]
+KEYWORDS = ["售", "滅火器"]
 PTT_URL = "https://www.ptt.cc/bbs/Drama-Ticket/index.html"
 SEEN_FILE = "seen.txt"
 WEBHOOK = os.environ["DISCORD_WEBHOOK"]

@@ -6,7 +6,6 @@ import time
 KEYWORDS = [
     ["售", "滅火器"],
     ["售", "如蝶翩翩"],
-    ["售", "五月天"]
 ]
 PTT_URL = "https://www.ptt.cc/bbs/Drama-Ticket/index.html"
 SEEN_FILE = "seen.txt"

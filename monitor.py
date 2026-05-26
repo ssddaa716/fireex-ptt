@@ -3,7 +3,10 @@ from bs4 import BeautifulSoup
 import os
 import time
  
-KEYWORDS = ["售", "滅火器"]
+KEYWORDS = [
+    ["售", "滅火器"],
+    ["售", "如蝶翩翩"],
+]
 PTT_URL = "https://www.ptt.cc/bbs/Drama-Ticket/index.html"
 SEEN_FILE = "seen.txt"
 WEBHOOK = os.environ["DISCORD_WEBHOOK"]
@@ -63,7 +66,7 @@ for title, url in titles:
     if url not in seen:
         new_seen.add(url)
         print(f"New article: {title}")
-        if all(k in title for k in KEYWORDS):
+        if any(all(k in title for k in group) for group in KEYWORDS):
             print(f"MATCH: {title}")
             send_discord(title, url)
  
